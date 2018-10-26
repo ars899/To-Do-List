@@ -97,7 +97,19 @@ class ToDoTableViewController: UITableViewController {
     */
     
     @IBAction func unwindToDoList(segue: UIStoryboardSegue){
-    
+        guard segue.identifier == "saveUnwind" else { return }
+        
+        guard let controller = segue.source as? ToDoViewController else { return }
+        
+        guard let todo = controller.todo else { return }
+        
+        todos.append(todo)
+        tableView.reloadData()
+            
+        }
+            
     }
+    
 
-}
+
+

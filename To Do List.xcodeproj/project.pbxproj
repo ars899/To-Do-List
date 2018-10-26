@@ -13,6 +13,7 @@
 		3FC1ED17217F0C3F000C033A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC1ED15217F0C3F000C033A /* LaunchScreen.storyboard */; };
 		3FC1ED1F217F0D39000C033A /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC1ED1E217F0D39000C033A /* ToDo.swift */; };
 		3FC1ED21217F111D000C033A /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC1ED20217F111D000C033A /* ToDoTableViewController.swift */; };
+		3FD0A89E21830E00003B407C /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0A89D21830E00003B407C /* ToDoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3FC1ED18217F0C3F000C033A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FC1ED1E217F0D39000C033A /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		3FC1ED20217F111D000C033A /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
+		3FD0A89D21830E00003B407C /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				3FC1ED18217F0C3F000C033A /* Info.plist */,
 				3FC1ED1E217F0D39000C033A /* ToDo.swift */,
 				3FC1ED20217F111D000C033A /* ToDoTableViewController.swift */,
+				3FD0A89D21830E00003B407C /* ToDoViewController.swift */,
 			);
 			path = "To Do List";
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD0A89E21830E00003B407C /* ToDoViewController.swift in Sources */,
 				3FC1ED0D217F0C35000C033A /* AppDelegate.swift in Sources */,
 				3FC1ED21217F111D000C033A /* ToDoTableViewController.swift in Sources */,
 				3FC1ED1F217F0D39000C033A /* ToDo.swift in Sources */,

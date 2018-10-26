@@ -12,7 +12,7 @@ struct ToDo{
     var tittle: String
     var isComplete: Bool
     var dueDate: Date
-    var notes: String
+    var notes: String?
     
     
     
@@ -23,12 +23,18 @@ struct ToDo{
     static func loadSampleToDos() -> [ToDo]{
         return [
             
-            ToDo(tittle: "Дело 1", isComplete: false, dueDate: Date(), notes: "Заметка 1"),
-            ToDo(tittle: "Дело 2", isComplete: false, dueDate: Date(), notes: "Заметка 2"),
-            ToDo(tittle: "Дело 3", isComplete: false, dueDate: Date(), notes: "Заметка 3"),
-            ToDo(tittle: "Дело 4", isComplete: false, dueDate: Date(), notes: "Заметка 4"),
-            ToDo(tittle: "Дело 5", isComplete: false, dueDate: Date(), notes: "Заметка 5"),
+            ToDo(tittle: "Купить хлеб", isComplete: false, dueDate: Date(), notes: "Бородинский"),
+            ToDo(tittle: "Заказать торт", isComplete: false, dueDate: Date(), notes: "Заметка 2"),
+            ToDo(tittle: "Сдать вещи в химчистку", isComplete: false, dueDate: Date(), notes: "Заметка 3"),
+            ToDo(tittle: "помыть машину", isComplete: false, dueDate: Date(), notes: "Заметка 4"),
+            ToDo(tittle: "Выгулить собаку", isComplete: false, dueDate: Date(), notes: "Заметка 5"),
             
         ]
     }
+    static let dueDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        return formatter
+    }()
 }
