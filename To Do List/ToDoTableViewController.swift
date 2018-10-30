@@ -10,7 +10,13 @@ import UIKit
 
 class ToDoTableViewController: UITableViewController {
     
-    var todos = [ToDo]()
+    var todos = [ToDo]() {
+        didSet {
+          try!  ToDo.realm.write {
+                ToDo.realm.add(todos)
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +68,9 @@ class ToDoTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            try! ToDo.realm.write {
+                ToDo.realm.delete(todos[indexPath.row])
+            }
             todos.remove(at: indexPath.row)
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
