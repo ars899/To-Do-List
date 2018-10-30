@@ -31,7 +31,10 @@ class ToDoTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+         self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        print(#function, ToDo.realm.configuration.fileURL ?? "nill")
+        
         
         navigationItem.leftBarButtonItem = editButtonItem
     }
